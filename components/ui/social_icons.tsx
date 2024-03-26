@@ -1,5 +1,6 @@
 import * as React from "react";
 import { SVGProps } from "react";
+import Link from "next/link";
 
 const Mail = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
@@ -43,7 +44,7 @@ const components = {
   x: X,
 };
 
-export default function SocialIcon({ kind, href, size = 8 }: any) {
+export default function SocialIcon({ kind, href, size = 20 }: any) {
   if (
     !href ||
     (kind === "mail" &&
@@ -54,17 +55,15 @@ export default function SocialIcon({ kind, href, size = 8 }: any) {
   const SocialSvg = components[kind as keyof typeof components];
 
   return (
-    <a
-      className="text-sm text-gray-500 transition hover:text-gray-600"
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
       href={href}
+      className="text-sm text-gray-500 transition hover:text-gray-600"
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg
         className="fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
         style={{ height: size, width: size }}
       />
-    </a>
+    </Link>
   );
 }

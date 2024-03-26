@@ -34,7 +34,7 @@ export default function Header() {
   }
 
   return (
-    <div className="mx-auto my-auto px-4 sm:px-6 md:max-w-3xl xl:px-0">
+    <div className="mx-auto my-auto px-4 sm:px-6 md:max-w-5xl xl:px-0">
       <header className="flex items-center justify-between py-10">
         <div className="mr-3">
           <Logo className="w-20 h-20" />

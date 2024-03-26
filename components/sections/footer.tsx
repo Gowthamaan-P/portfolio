@@ -10,10 +10,10 @@ export default function Footer() {
   const router = useRouter();
 
   const socialMediaPlatforms = [
-    { kind: "mail", href: `mailto:${siteMetadata.email}`, size: "20" },
-    { kind: "github", href: siteMetadata.github, size: "20" },
-    { kind: "linkedin", href: siteMetadata.linkedin, size: "20" },
-    { kind: "x", href: siteMetadata.x, size: "20" },
+    { kind: "mail", href: `mailto:${siteMetadata.email}`},
+    { kind: "github", href: siteMetadata.github},
+    { kind: "linkedin", href: siteMetadata.linkedin},
+    { kind: "x", href: siteMetadata.x},
   ];
 
   const buttons = [
@@ -48,7 +48,6 @@ export default function Footer() {
               key={index}
               kind={platform.kind}
               href={platform.href}
-              size={platform.size}
             />
           ))}
         </div>

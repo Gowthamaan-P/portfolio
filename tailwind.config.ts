@@ -23,6 +23,7 @@ const config = {
       'cement': '#8C8C8C',
       'dust': '#C3C3C3',
       'blueGrey': '#475569',
+      'darkGrey': '#292B2F',
     },
     container: {
       center: true,

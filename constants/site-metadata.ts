@@ -13,7 +13,7 @@ const siteMetadata = {
   email: 'gowthamaan.mail@gmail.com',
   github: 'https://github.com/Gowthamaan-P',
   x: '',
-  linkedin: 'https://www.linkedin.com/in/gowthamaan-palani-b06a3519b/',
+  linkedin: 'https://www.linkedin.com/in/gowthamaan-palani/',
 };
 
 export default siteMetadata;

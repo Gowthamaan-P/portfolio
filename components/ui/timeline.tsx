@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import Listicon from "@/components/ui/list_icon";
+import Link from "next/link";
 
 export function Lineitem({
   designation,
@@ -12,26 +13,24 @@ export function Lineitem({
   location,
   description,
 }: any) {
-
-    const ref = useRef(null);
+  const ref = useRef(null);
 
   return (
-    <li ref={ref} className="my-8 first:mt-0 last:mb-0 mx-auto flex flex-col items-center justify-between">
-      <Listicon reference={ref}/>
+    <li
+      ref={ref}
+      className="my-8 first:mt-0 last:mb-0 mx-auto flex flex-col items-center justify-between"
+    >
+      <Listicon reference={ref} />
       <motion.div
-      initial={{y:50}}
-      whileInView={{y:0}}
-      transition={{duration:0.5, type:"spring"}}
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl">
           {designation}&nbsp;
-          <a
-            href={link}
-            target="_blank"
-            className="text-brand capitalize"
-          >
+          <Link href={link} className="text-brand capitalize">
             &nbsp;@{institution}
-          </a>
+          </Link>
         </h3>
         <span className="capitalize font-medium text-2sm text-gray-500">
           {period} | {location}
